@@ -79,13 +79,13 @@ class SiteController extends Controller
             $photo_name=time().'_'.$photo_ori_name;
             $photo->move(public_path('img/feedback_photo'),$photo_name);
             $name=$request->get('name');
-            $position=$request->get('position');
+//            $position=$request->get('position');
             $description=$request->get('description');
             $rating=$request->get('rating');
             Feedback::create([
                 'name'=>$name,
                 'photo'=>$photo_name,
-                'position'=>$position,
+//                'position'=>$position,
                 'description'=>$description,
                 'rating'=>$rating,
                 'date'=>$date
@@ -98,20 +98,20 @@ class SiteController extends Controller
             $photo_name=time().'_'.$photo_ori_name;
             $photo->move(public_path('img/feedback_photo'),$photo_name);
             $name=$request->get('name');
-            $position=$request->get('position');
+//            $position=$request->get('position');
             $description=$request->get('description');
             $rating=$request->get('rating');
             date_default_timezone_set("Asia/Yangon");
             Feedback::create([
                 'name'=>$name,
                 'photo'=>$photo_name,
-                'position'=>$position,
+//                'position'=>$position,
                 'description'=>$description,
                 'rating'=>$rating,
                 'date'=>date('m/d/Y')
             ]);
 
-            return redirect('/customer_feedback');
+            return redirect('/customer_feedback')->with(['feedback_msg'=>'bla']);
         }
        
     }   
@@ -147,7 +147,7 @@ class SiteController extends Controller
             $update_feedback->photo=$photo_name;
         }
         $update_feedback->name=$request->get('name');
-        $update_feedback->position=$request->get('position');
+//        $update_feedback->position=$request->get('position');
         $update_feedback->description=$request->get('description');
         $update_feedback->date=$request->get('date');
         $update_feedback->update();

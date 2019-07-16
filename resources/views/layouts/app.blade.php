@@ -6,6 +6,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- FAVICON AND APPLE TOUCH -->
+    <link rel="shortcut icon" href="{{asset('images/lamoda/icon.jpeg')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="{{asset('frontend/images/apple-touch-180x180.png')}}">
 
     <title>@yield('title')</title>
 

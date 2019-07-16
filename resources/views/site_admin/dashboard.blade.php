@@ -145,8 +145,8 @@
                     t.row.add( [
                         (no++),
                         data_list[i].name,
-                        data_list[i].phone,
-                        data_list[i].email,
+                        '<a href="tel:'+data_list[i].phone+'">'+data_list[i].phone+'</a>',
+                        '<a href="mailto:'+data_list[i].email+'">'+data_list[i].email+'</a>',
                         data_list[i].address,
                         JSON.parse(data_list[i].product_type).toString(),
                         data_list[i].order_detail,

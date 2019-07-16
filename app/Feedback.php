@@ -8,7 +8,7 @@ class Feedback extends Model
 {
     protected $fillable=[
     	'name',
-    	'position',
+//    	'position',
     	'photo',
     	'description',
         'rating',

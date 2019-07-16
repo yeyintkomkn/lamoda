@@ -86,9 +86,9 @@ Contact|Lamoda
                     <fieldset>
                         {{csrf_field()}}
 
-                        <div class="text-primary">
-                            {{ session('success_msg') }}
-                        </div>
+                        {{--<div class="text-primary">--}}
+                            {{--{{ session('success_msg') }}--}}
+                        {{--</div>--}}
 
                         <input class="col-xs-12" id="name" type="text" name="name" placeholder="name">
 
@@ -119,5 +119,11 @@ Contact|Lamoda
 @endsection
 
 @section('js')
+<script>
 
+    @if(Session::has('success_msg'))
+    toastr.success("Form Submit Success..");
+
+    @endif
+</script>
 @endsection

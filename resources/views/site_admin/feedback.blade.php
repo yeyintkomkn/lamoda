@@ -43,14 +43,14 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="row">
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    <label class="bmd-label-floating">Position</label>
-                                    <input type="text" name="position" class="form-control feedback_position" required>
-                                  </div>
-                                </div>
-                              </div>
+                              {{--<div class="row">--}}
+                                {{--<div class="col-md-12">--}}
+                                  {{--<div class="form-group">--}}
+                                    {{--<label class="bmd-label-floating">Position</label>--}}
+                                    {{--<input type="text" name="position" class="form-control feedback_position" required>--}}
+                                  {{--</div>--}}
+                                {{--</div>--}}
+                              {{--</div>--}}
                               <div class="row">
                                 <div class="col-md-12">
                                   <div class="form-group">
@@ -95,9 +95,9 @@
                             <table class="table table-hover" id="feedback_paginate">
                               <thead class="text-warning">
                                 <th>No</th>
-                                <th width="200">Photo</th>
-                                <th>Name</th>
-                                <th>Position</th>
+                                <th width="150">Photo</th>
+                                <th width="200">Name</th>
+                                {{--<th>Position</th>--}}
                                 <th width="30">Rating</th>
                                 <th>Date</th>
                                 <th width="250">Description</th>
@@ -147,7 +147,7 @@
                 let id=feedback.id;
                 let photo=feedback.photo_url;
                 let image='<img src="'+photo+'" style="width:70px;height:70px" class="img-thumbnail">';
-                let position=feedback.position;
+//                let position=feedback.position;
                 let rating=feedback.rating;
                 let description="<p data-toggle='tooltip' data-placement='top' title='"+feedback.description+"'>"+feedback.description.substring(0,30)+"</p>";
 //                let description="<p title='aaa'>"+"hello"+"</p>";
@@ -156,7 +156,7 @@
                 let td_generate='<button class="btn btn-sm btn-danger feedback_delete" data-id="'+id+'">Delete</button><a href="#feedback_top" data-id="'+id+'" class="btn btn-sm btn-info edit_feedback">Update</a>';
 //                 <a href="#feedback_top" data-id="'+id+'" class="btn btn-sm btn-info edit_feedback">Update</a>
                 let table=$('#feedback_paginate').DataTable();
-                table.row.add([no,image,feedback_name,position,rating,date,description,td_generate]).draw();
+                table.row.add([no,image,feedback_name,rating,date,description,td_generate]).draw();
 
              });
           }
@@ -198,7 +198,7 @@
 				contentType : false,
 				processData : false
 			}).done(function(response){
-//			    console.log(response);
+			    console.log(response);
 				if(response){
 					$('#feedback_store')[0].reset();
                     $("#image_id").attr("src","{{asset('img/default.jpg')}}");
@@ -229,11 +229,11 @@
       }).done(function(response){
         document.getElementById("rating_row").style.display = 'none';
         let photo=response.photo_url;
-        let position=response.position;
+//        let position=response.position;
         let description=response.description;
         let name=response.name;
         let date=response.date;
-        $('.feedback_position').val(position);
+//        $('.feedback_position').val(position);
         $('.feedback_description').val(description);
         $('.feedback_date').val(date);
         $('.feedback_name').val(name);

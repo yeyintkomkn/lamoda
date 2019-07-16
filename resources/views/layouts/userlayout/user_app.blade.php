@@ -19,6 +19,7 @@
     <!-- FONTS -->
     <link rel="stylesheet" href="{{url('frontend/css/google_font1.css')}}">
     <link rel="stylesheet" href="{{url('css/myanmar.css')}}">
+    <link rel="stylesheet" href="{{url('css/toastr.min.css')}}">
 
     <!-- BOOTSTRAP CSS -->
     <!-- Latest compiled and minified CSS -->
@@ -186,6 +187,9 @@
     <!-- STYLE SWITCHER -->
     <script src="{{url('frontend/js/jquery.cookie.js')}}"></script>
     <script src="{{url('frontend/js/theme-options.js')}}"></script>
+    <script src="{{url('js/toastr.min.js')}}"></script>
+
+
     <script>
 
         $("#rateBox").rate({
@@ -202,6 +206,12 @@
                 $('#rating').val((star+1));
             }
         });
+
+
+        @if(Session::has('feedback_msg'))
+            toastr.success("Thank For Your Feedback...");
+
+        @endif
     </script>
 
     @yield('js')

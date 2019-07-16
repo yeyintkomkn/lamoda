@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2019-04-05 13:50:26
--- 服务器版本： 10.1.31-MariaDB
+-- Generation Time: Jul 16, 2019 at 02:47 PM
+-- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `accessories`
+-- Table structure for table `accessories`
 --
 
 CREATE TABLE `accessories` (
@@ -38,7 +38,7 @@ CREATE TABLE `accessories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转存表中的数据 `accessories`
+-- Dumping data for table `accessories`
 --
 
 INSERT INTO `accessories` (`id`, `name`, `detail`, `level`, `created_at`, `updated_at`) VALUES
@@ -57,7 +57,7 @@ INSERT INTO `accessories` (`id`, `name`, `detail`, `level`, `created_at`, `updat
 -- --------------------------------------------------------
 
 --
--- 表的结构 `contacts`
+-- Table structure for table `contacts`
 --
 
 CREATE TABLE `contacts` (
@@ -71,25 +71,25 @@ CREATE TABLE `contacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转存表中的数据 `contacts`
+-- Dumping data for table `contacts`
 --
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `title`, `message`, `created_at`, `updated_at`) VALUES
 (1, 'Sai Arkar', 'sai@gamil.com', 'Page Apple', 'been the industry\'s standard dummy text ever since the 1500s, been the industry\'s standard dummy text ever since the 1500s, been the industry\'s standard dummy text ever since the 1500s, been the industry\'s standard dummy text ever since the 1500s,', '2019-03-15 03:42:53', '2019-03-15 03:42:53'),
 (2, 'Ye Yint Ko', 'greenhacker@gmail.com', 'Page Apple', 'been the industry\'s standard dummy text ever since the 1500s, been the industry\'s standard dummy text ever since the 1500s,', '2019-03-15 03:43:50', '2019-03-15 03:43:50'),
-(3, 'Grand Diamond Guest House', 'admin@gmail.com', 'Page Apple', 'dffdf', '2019-04-05 04:52:04', '2019-04-05 04:52:04');
+(3, 'Grand Diamond Guest House', 'admin@gmail.com', 'Page Apple', 'dffdf', '2019-04-05 04:52:04', '2019-04-05 04:52:04'),
+(4, 'Ye Yint Ko', 'admin@gmail.com', 'Page Apple', 'fdsasdfdfdfdfd', '2019-07-16 05:04:50', '2019-07-16 05:04:50');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `feedback`
+-- Table structure for table `feedback`
 --
 
 CREATE TABLE `feedback` (
   `id` int(10) UNSIGNED NOT NULL,
   `photo` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `position` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `rating` int(11) NOT NULL,
@@ -98,25 +98,39 @@ CREATE TABLE `feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转存表中的数据 `feedback`
+-- Dumping data for table `feedback`
 --
 
-INSERT INTO `feedback` (`id`, `photo`, `name`, `position`, `description`, `date`, `rating`, `created_at`, `updated_at`) VALUES
-(16, '1551678844_received_254690375467421.png', 'Wai Lin Aung', 'Android Developer', 'Well all I can say, is SHUT YO MOUTH! When I pulled out those dresses I was in shock at how beautiful they were. I immediately tried them on and they were stunning on. I tell you there is nothing like a confident plus size women because you don\'t even need anyone to tell you you look good you know it. The material and the way the dress hung was awesome. The only draw back is the length of time it took to get the dressed shipped to the USA. I ordered them on Feb 22nd and they didn\'t arrive until yesterday March 8th.', '03/20/2019', 5, '2019-03-03 23:24:04', '2019-03-16 01:37:37'),
-(17, '1551678885_received_259991251571470.png', 'Smirth', 'Web Developer', 'Just wanted to say that i am very pleased with this web site. Yours Clothing thank you so much for offering wonderful fun flirty clothing for us Plus size girls, for once there are beautiful clothes that fit us girls just right! This was my first purchase from this web site and let me tell you i have had the best experience ever! Fast shipping and it was an overall GREAT EXPERIENCE!! I will continue to shop here and i cant wait to wear my clothes out on the town!! Thank you so much!!', '03/20/2019', 5, '2019-03-03 23:24:45', '2019-03-16 01:35:44'),
-(18, '1551689401_received_247710852803607.png', 'Mr Mo Mo', 'Manager', 'I just had to say how much i love your clothing line. The clothes fit great. My hope would be that you make the 2 in 1s with more colors, such as solids with prints inside. Brighter colors mix with each other. These tops would be worn a the work place etc. Thanks again.', '03/19/2019', 5, '2019-03-04 02:20:01', '2019-03-16 01:36:32'),
-(20, '1554433938_received_253562118881329.png', 'Htet Htet', 'Web Dev', 'ust wanted to say that i amust wanted to say that i am', '04/01/2019', 5, '2019-04-04 20:42:18', '2019-04-04 20:42:18'),
-(21, '1554438543_received_253809338857885.png', 'Aung Aung', 'useer', 'sssddsddf', '04/07/2019', 5, '2019-04-04 21:59:03', '2019-04-04 21:59:03'),
-(22, '1554439588_received_326883224628338.png', 'Thiri Ko', 'Sailer', 'st wanted to say that i amusst wanted to say that i amusst wanted to say that i amus', '04/15/2019', 4, '2019-04-04 22:16:28', '2019-04-04 22:16:28'),
-(23, '1554442634_received_324896405039156.png', 'Khin Moe Aye', 'Helo', 'sdfsdfasdfdff', '04/05/2019', 4, '2019-04-05 05:37:14', '2019-04-05 05:37:14'),
-(24, '1554462376_received_358969084709991.png', 'Aung Aung', 'Web Dev', 'assasasassas', '04/05/2019', 4, '2019-04-05 11:06:16', '2019-04-05 11:06:16'),
-(25, '1554462477_received_304867896891888.png', 'Mo Lao Hein', 'Master', 'f fabrics and 100%.cashmere and wools as a fabrics.Estimated time tf fabrics and 100%.cashmere and wools as a fabrics.Estimated time tf fabrics and 100%.cashmere and wools as a fabrics.Estimated time t', '04/05/2019', 4, '2019-04-05 11:07:57', '2019-04-05 11:07:57'),
-(29, '1554463059_received_306438680070830.png', 'Ye Yint Ko', 'sd', 'dsd', '04/05/2019', 4, '2019-04-05 11:17:39', '2019-04-05 11:17:39');
+INSERT INTO `feedback` (`id`, `photo`, `name`, `description`, `date`, `rating`, `created_at`, `updated_at`) VALUES
+(30, '1554548270_3FT2_75_TRAVELER_NAVY_MAIN.jpg', 'Zayya', 'My friend told me about LaModa suits shop for my graduation suit. Their quality and craftsmanship is first rate and their commitment to customer service is unparalleled. I would recommend them to anyone looking for a suit that will make a great impression.', '02/06/2019', 5, '2019-04-06 04:27:50', '2019-04-06 04:27:50'),
+(31, '1554549194_38b39448-d0e2-4860-a52f-75e48abae0521529319525755-HANGUP-MENS-2-PIC-COAT-SUIT-1021529319525550-1.jpg', 'Naing Lin', 'Great quality custom  made suits and accessories Excellent service provided by the owner of the LaModa. I’m very happy with the result and definitely recommend this place.', '02/01/2018', 5, '2019-04-06 04:43:14', '2019-04-06 04:43:14'),
+(32, '1554549240_53ec7b4bccf46f45b675e244f4b884b5.jpg', 'Thaw Thaw', 'Great quality custom  made suits and accessories Excellent service provided by the owner of the LaModa. I’m very happy with the result and definitely recommend this place.', '02/01/2018', 5, '2019-04-06 04:44:01', '2019-04-06 04:44:01'),
+(33, '1554549317_53ec7b4bccf46f45b675e244f4b884b5.jpg', 'Aung Phyo Kaine', 'LaModa suit in Mandalay made an excellent business suit for me. The shop owner is a very friendly and welcoming, he explained and showed everything to me in great detail. I can highly recommend this tailor.', '04/23/2019', 5, '2019-04-06 04:45:17', '2019-04-06 04:45:17'),
+(34, '1554549380_49345428nt_14_f.jpg', 'Yar Zar', 'The best custom tailoring shop in Mandalay. Very good quality or best service. I love it design.', '01/08/2019', 5, '2019-04-06 04:46:20', '2019-04-06 04:46:20'),
+(35, '1554549436_49353106ku_13_f.jpg', 'Naing Myint Htet', 'LaModa is great. I think it will going to makes you smile on your face or satisfied after the fitting.', '04/09/2018', 5, '2019-04-06 04:47:16', '2019-04-06 04:47:16'),
+(36, '1554549488_171171090-suits-24.jpg', 'Yan Naing Lynn', 'You want a perfect suit and cheap price? Make it in Lamoda.', '04/25/2018', 5, '2019-04-06 04:48:08', '2019-04-06 04:48:08'),
+(37, '1554549625_11519019888131-Raymond-Grey-Slim-Fit-Single-Breasted-Formal-Suit-6631519019887959-1.jpg', 'Satt Paing Oo', 'This show room was amazing fabrics design, cutting was great shop manager was so friendly service was also good.', '09/18/2017', 5, '2019-04-06 04:50:25', '2019-04-06 04:50:25'),
+(38, '1554549676_b2b51d976b4fd407e29975e268334668--burgundy-suit-men-deep-burgundy.jpg', 'Naing Myo', 'I was happy with his service, quality and price. They use high range of quality and 5 stars service they give you.', '12/01/2017', 5, '2019-04-06 04:51:16', '2019-04-06 04:51:16'),
+(39, '1554549733_Black-Suit-1_1024x1024.jpg', 'Thaw Zin Soe', 'Truly satisfied with the service or products of high quality very good and I really satisfied.', '04/01/2019', 4, '2019-04-06 04:52:13', '2019-04-06 04:52:13'),
+(40, '1554549769_c437a48258fcec2aac1bfbd9b710a53d.jpg', 'Hla Moe', 'Ordered multiple suits and dress shirts, items were delivered on time and the minimal alterations needed were taken care of. I would prefer a mid-weed fitting to ensure fit bit. I understand the word is done. I would like to see operations in Mandalay in the future will be back though.', '04/10/2017', 4, '2019-04-06 04:52:49', '2019-04-06 04:52:49'),
+(41, '1554549825_ef358ed1c5730074ea36aa108c86c426.jpg', 'Ye Yint', 'Best customized tailor shop in Mandalay. Lamoda provide good service, patient, get the design . I wanted quality is good and price is reasonable. No need to go for Thailand to make custom suit.', '02/01/2019', 5, '2019-04-06 04:53:45', '2019-04-06 04:53:45'),
+(42, '1554549873_images (1).jpg', 'San Thin Oo', 'On time, professional, quick, did excellent work, reasonable price and even threw in some or free professional strength cleaner. Highly recommend.', '04/03/2017', 5, '2019-04-06 04:54:33', '2019-04-06 04:54:33'),
+(43, '1554549930_images (3).jpg', 'Sai Arkar', 'It’s the best tailor in Myanmar, making design and dress are professional and comfortable for me thank you so much make sure I will be back again.', '04/01/2019', 5, '2019-04-06 04:55:30', '2019-04-06 04:55:30'),
+(44, '1554549983_images (2).jpg', 'San Yu', 'Good tailor for men jacked and I get to custom made packets from LaModa suit. I like them.', '02/20/2019', 5, '2019-04-06 04:56:23', '2019-04-06 04:56:23'),
+(45, '1554550019_images (4).jpg', 'Myo Aung', 'It’s nice shop. I get perfect size at Lamoda is really nice and look good .Thanks you LaModa.ss', '04/18/2017', 5, '2019-04-06 04:56:59', '2019-04-06 04:56:59'),
+(46, '1554550158_images (5).jpg', 'Thant Zin Htet', 'This is a nice comfortable breathable shirt. This shirt is an exactly what I ordered and serves it\'s purpose perfectly. Great Buy, great quality', '02/05/2018', 5, '2019-04-06 04:59:18', '2019-04-06 04:59:18'),
+(47, '1554556764_0039_04371709_1981_f018.jpg', 'Thaw Zin Soe', 'Really nice fit and thin material which I like. It was for my brother but I think that I will be wearing it as well LOL!', '04/03/2017', 4, '2019-04-06 06:49:24', '2019-04-06 06:49:24'),
+(48, '1554557470_0039_06101995_1336.jpg', 'Moe Moe', 'Got this for my brother for his birthday. He loves it! fits perfect good quality.', '04/03/2017', 4, '2019-04-06 07:01:10', '2019-04-06 07:01:10'),
+(50, '1554558164_UOMO-65I-4PV003-OTAz0.jpg', 'Chit Min', 'The fit is perfect. The material is great and very good quality. I feel it\'s a great buy for the  low price. Tried it just to see if it would work for me. I like this brand and will buy more from this brand.', '02/06/2019', 5, '2019-04-06 07:02:01', '2019-04-06 07:12:44'),
+(51, '1554557713_7175603-1-navy.jpg', 'Wai Lin', 'Look really good every body loves it. They say it remind them of black panther.', '02/01/2019', 5, '2019-04-06 07:05:13', '2019-04-06 07:05:13'),
+(52, '1555420558_0039_03251815_0098.jpg', 'Aung Min Soe', 'This suit is so dope and eye catching. Got so many compliments.', '04/01/2019', 5, '2019-04-16 06:45:58', '2019-04-16 06:45:58'),
+(53, '1555420639_176694-458534-large.jpg', 'Moe Kyaw Kyaw', 'This suit looks great and feel great, and fits perfectly.', '04/01/2019', 5, '2019-04-16 06:47:19', '2019-04-16 06:47:19'),
+(54, '1555420678_256168-972581.jpg', 'Aung Ko Lat', 'This shirt fits my brother perfect! He will be wearing this Hot shirt for my 18th Birthday.', '02/04/2019', 5, '2019-04-16 06:47:58', '2019-04-16 06:47:58');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -126,7 +140,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转存表中的数据 `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -145,7 +159,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `orders`
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -161,17 +175,16 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转存表中的数据 `orders`
+-- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`id`, `name`, `phone`, `email`, `address`, `product_type`, `order_detail`, `created_at`, `updated_at`) VALUES
-(5, 'Aung Aung', '09771672511', NULL, 'reasonable price.We use different types of fabrics and 10', '[\"Toxedo Suits\\/ Smoking Suits\",\"Double Breasted Suits\",\"Chinese Suits\"]', 'reasonable price.We use different types of fabrics and 10reasonable price.We use different types of fabrics and 10', '2019-03-15 22:07:42', '2019-03-15 22:07:42'),
-(7, 'Ye Yint Ko', '09771672511', NULL, 'ccxcx', '[\"Toxedo Suits\\/ Smoking Suits\",\"Chinese Suits\",\"Suspenders\"]', 'cccxcxcxc', '2019-04-05 04:52:58', '2019-04-05 04:52:58');
+(5, 'Aung Aung', '09771672511', NULL, 'reasonable price.We use different types of fabrics and 10', '[\"Toxedo Suits\\/ Smoking Suits\",\"Double Breasted Suits\",\"Chinese Suits\"]', 'reasonable price.We use different types of fabrics and 10reasonable price.We use different types of fabrics and 10', '2019-03-15 22:07:42', '2019-03-15 22:07:42');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -183,7 +196,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -197,7 +210,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转存表中的数据 `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `data_id`, `product_type`, `photo`, `price`, `created_at`, `updated_at`) VALUES
@@ -592,7 +605,7 @@ INSERT INTO `products` (`id`, `data_id`, `product_type`, `photo`, `price`, `crea
 -- --------------------------------------------------------
 
 --
--- 表的结构 `site_informations`
+-- Table structure for table `site_informations`
 --
 
 CREATE TABLE `site_informations` (
@@ -610,16 +623,16 @@ CREATE TABLE `site_informations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转存表中的数据 `site_informations`
+-- Dumping data for table `site_informations`
 --
 
 INSERT INTO `site_informations` (`id`, `name`, `email`, `phone1`, `phone2`, `address1`, `address2`, `facebook_url`, `about_us`, `created_at`, `updated_at`) VALUES
-(1, 'La Moda', 'lamodasuits@gmail.com', '[\"09766836219\",\"09975505670\"]', '[\"09959594947\",\"09790901339\"]', '35 St, Btw 73 - 74, Mandalay', '33 St,Btw 76 - 77,Mandalay', 'https://www.facebook.com/lamodasuits/', 'Since 2017, The first ever tailor in Mandalay to use fabrics for Bangkok mode Suits with reasonable price.We use different types of fabrics and 100%.cashmere and wools as a fabrics.Estimated time to get one suit is 1wk.We would like to show our greatest workmanships.', NULL, '2019-03-15 21:54:27');
+(1, 'La Moda', 'lamodasuits@gmail.com', '[\"0943199805\",\"09975505670\"]', '[\"09959594947\",\"09790901339\"]', '35 St, Btw 73 - 74, Mandalay', '33 St,Btw 76 - 77,Mandalay', 'https://www.facebook.com/lamodasuits/', 'Since 2017, The first ever tailor in Mandalay to use fabrics for Bangkok mode Suits with reasonable price.We use different types of fabrics and 100%.cashmere and wools as a fabrics.Estimated time to get one suit is 1wk.We would like to show our greatest workmanships.', NULL, '2019-04-06 07:35:04');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `suits`
+-- Table structure for table `suits`
 --
 
 CREATE TABLE `suits` (
@@ -636,7 +649,7 @@ CREATE TABLE `suits` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `suit_types`
+-- Table structure for table `suit_types`
 --
 
 CREATE TABLE `suit_types` (
@@ -648,7 +661,7 @@ CREATE TABLE `suit_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转存表中的数据 `suit_types`
+-- Dumping data for table `suit_types`
 --
 
 INSERT INTO `suit_types` (`id`, `name`, `detail`, `created_at`, `updated_at`) VALUES
@@ -660,7 +673,7 @@ INSERT INTO `suit_types` (`id`, `name`, `detail`, `created_at`, `updated_at`) VA
 -- --------------------------------------------------------
 
 --
--- 表的结构 `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -675,7 +688,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转存表中的数据 `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -685,7 +698,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 -- --------------------------------------------------------
 
 --
--- 表的结构 `waist_coats`
+-- Table structure for table `waist_coats`
 --
 
 CREATE TABLE `waist_coats` (
@@ -697,7 +710,7 @@ CREATE TABLE `waist_coats` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转存表中的数据 `waist_coats`
+-- Dumping data for table `waist_coats`
 --
 
 INSERT INTO `waist_coats` (`id`, `name`, `detail`, `created_at`, `updated_at`) VALUES
@@ -784,81 +797,81 @@ ALTER TABLE `waist_coats`
   ADD PRIMARY KEY (`id`);
 
 --
--- 在导出的表使用AUTO_INCREMENT
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- 使用表AUTO_INCREMENT `accessories`
+-- AUTO_INCREMENT for table `accessories`
 --
 ALTER TABLE `accessories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- 使用表AUTO_INCREMENT `contacts`
+-- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- 使用表AUTO_INCREMENT `feedback`
+-- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
--- 使用表AUTO_INCREMENT `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- 使用表AUTO_INCREMENT `orders`
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- 使用表AUTO_INCREMENT `products`
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=436;
 
 --
--- 使用表AUTO_INCREMENT `site_informations`
+-- AUTO_INCREMENT for table `site_informations`
 --
 ALTER TABLE `site_informations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- 使用表AUTO_INCREMENT `suits`
+-- AUTO_INCREMENT for table `suits`
 --
 ALTER TABLE `suits`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `suit_types`
+-- AUTO_INCREMENT for table `suit_types`
 --
 ALTER TABLE `suit_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- 使用表AUTO_INCREMENT `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- 使用表AUTO_INCREMENT `waist_coats`
+-- AUTO_INCREMENT for table `waist_coats`
 --
 ALTER TABLE `waist_coats`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- 限制导出的表
+-- Constraints for dumped tables
 --
 
 --
--- 限制表 `suits`
+-- Constraints for table `suits`
 --
 ALTER TABLE `suits`
   ADD CONSTRAINT `suits_suit_type_id_foreign` FOREIGN KEY (`suit_type_id`) REFERENCES `suit_types` (`id`) ON DELETE CASCADE;

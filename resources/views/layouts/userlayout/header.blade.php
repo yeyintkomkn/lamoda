@@ -68,19 +68,19 @@
                                 <li><a href="{{url('suit_type/'.$data['id'])}}">{{$data['name']}}</a></li>
                                 @endforeach --}}
                         </li>
-                        <li class="dropdown @if($page_url=='service') active @endif">
+                        <li class=" @if($page_url=='service') active @endif">
                             <a href="{{url('services')}}">Services</a>
                         </li>
-                        <li class="dropdown @if($page_url=='order') active @endif">
+                        <li class=" @if($page_url=='order') active @endif">
                             <a href="{{url('order')}}">Order</a>
                         </li>
-                        <li class="dropdown @if($page_url=='feedback') active @endif">
+                        <li class=" @if($page_url=='feedback') active @endif">
                             <a href="{{url('customer_feedback')}}">Feedbacks</a>
                         </li>
-                        <li class="dropdown @if($page_url=='about') active @endif">
+                        <li class=" @if($page_url=='about') active @endif">
                             <a href="{{url('about')}}">About Us</a>
                         </li>
-                        <li class="dropdown @if($page_url=='contact') active @endif">
+                        <li class=" @if($page_url=='contact') active @endif">
                             <a href="{{url('contact')}}">Contact</a>
                         </li>
                     </ul>

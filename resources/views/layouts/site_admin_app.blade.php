@@ -10,6 +10,11 @@
   <title>
     @yield('title')
   </title>
+  <!-- FAVICON AND APPLE TOUCH -->
+  <link rel="shortcut icon" href="{{asset('images/lamoda/icon.jpeg')}}">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="{{asset('frontend/images/apple-touch-180x180.png')}}">
+
+
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="{{asset('css/google_font.css')}}" />
@@ -67,7 +72,7 @@
           </li> -->
           <li class="nav-item {{Request::is('accessory') ? 'active' :''}}">
             <a class="nav-link" href="{{url('accessory')}}">
-              <i class="material-icons">library_books</i>
+              <i class="material-icons">list</i>
               <p>Product Types</p>
             </a>
           </li>
@@ -86,19 +91,19 @@
           </li>
           <li class="nav-item {{Request::is('site_information') ? 'active' :''}}"">
             <a class="nav-link" href="{{url('site_information')}}">
-              <i class="material-icons">library_books</i>
+              <i class="material-icons">info</i>
               <p>Site Information</p>
             </a>
           </li>
           <li class="nav-item {{Request::is('feedback') ? 'active' :''}}"">
             <a class="nav-link" href="{{url('feedback')}}">
-              <i class="material-icons">library_books</i>
+              <i class="material-icons">feedback</i>
               <p>Feedback</p>
             </a>
           </li>
           <li class="nav-item {{Request::is('logout') ? 'active' :''}}"">
             <a class="nav-link" href="{{url('logout')}}">
-              <i class="material-icons">library_books</i>
+              <i class="material-icons">logout</i>
               <p>Log out</p>
             </a>
           </li>

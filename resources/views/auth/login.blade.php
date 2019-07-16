@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+    Login | Lamoda
+    @endsection
 @section('content')
 <div class="wrapper fadeInDown">
   <div id="formContent">
